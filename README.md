@@ -165,54 +165,56 @@ Thus, **high-priority job execution** is our third goal.
 ## Types of Operating Systems (OS)
 
 ### 1. Single Process OS
-- **Description**: A simple OS where only one job is executed at a time.
+- **Description**: An operating system that allows only one process to execute at a time, leading to serial job processing.
 - **Example**: MS-DOS.
 - **Limitations**:
-    - **CPU Utilization**: Poor, as only one job executes at a time. If P1 waits for I/O, other jobs like P2 and P3 remain idle.
-    - **Process Starvation**: Yes, as other jobs wait if P1 is a long-running process.
-    - **High Priority Job Execution**: Not supported, since only one job can run at a time.
+    - **CPU Utilization**: Inefficient, as only one process runs at a time. If the active process is waiting for I/O, the CPU remains idle.
+    - **Process Starvation**: Can occur if one long-running process prevents other jobs from executing.
+    - **High Priority Job Execution**: Not supported, as only one job can run at a time.
 
 ### 2. Batch Processing OS
-- **Description**: Jobs are grouped into batches and submitted for execution.
-- **Example**: Punch card systems.
+- **Description**: Groups of jobs are collected and executed sequentially in batches.
+- **Example**: Early punch card systems.
 - **Limitations**:
-    - **CPU Utilization**: Still poor, as jobs are processed sequentially within batches.
-    - **Process and Batch Starvation**: Yes, if one batch or job takes too long, others will starve.
-    - **High Priority Job Execution**: No, as batches are executed in order without interruption.
+    - **CPU Utilization**: Suboptimal, as jobs within batches are executed sequentially without overlap.
+    - **Process and Batch Starvation**: A lengthy job or batch can delay the execution of others, causing starvation.
+    - **High Priority Job Execution**: Not supported, as batch jobs are executed in a fixed order.
 
 ### 3. Multi-programming OS
-- **Description**: Multiple jobs reside in memory, and whenever a job goes to I/O, the CPU executes another job.
+- **Description**: Multiple jobs reside in memory simultaneously, and the OS switches between them to keep the CPU active.
 - **Advantages**:
-    - **CPU Utilization**: Improved, as the CPU doesn’t remain idle during I/O operations.
-    - **Process Starvation**: Reduced, since multiple jobs get chances to execute.
+    - **CPU Utilization**: Improved, as the CPU continues executing other jobs while one is waiting for I/O.
+    - **Process Starvation**: Reduced, as multiple jobs get execution opportunities.
     - **High Priority Job Execution**: Supported through **context switching**.
 
 #### Context Switching Example:
-Consider studying Physics and Chemistry for exams. You close your Physics books, save your progress, and switch to Chemistry. Similarly, the OS saves the current process state (via the **Process Control Block (PCB)**) and switches to another process.
+Just like switching between study subjects by saving progress in one and moving to another, the OS saves the current process state using the **Process Control Block (PCB)** and switches to another process.
 
 ### 4. Multi-tasking OS
-- **Description**: An enhancement of multi-programming with **time-sharing**. Each process is given a small time slice (quantum) for execution.
+- **Description**: Builds on multi-programming by incorporating **time-sharing**, where each process receives a time slice for execution.
 - **Advantages**:
-    - **CPU Utilization**: High, as the CPU continuously switches between jobs.
-    - **Process Starvation**: Less, as each process gets equal time slices.
-    - **High Priority Job Execution**: Yes, a high-priority job can interrupt others via **software interrupts**.
+    - **CPU Utilization**: High, due to constant switching between processes.
+    - **Process Starvation**: Minimized, as each process receives an equal time slice.
+    - **High Priority Job Execution**: Supported via **software interrupts**, allowing high-priority processes to preempt others.
 
 ### 5. Multi-processing OS
-- **Description**: An OS with multiple CPUs.
+- **Description**: An OS designed to work with multiple CPUs.
 - **Advantages**:
-    - **CPU Utilization**: Very high, as multiple CPUs execute jobs simultaneously.
-    - **Reliability**: Increased, as failure of one CPU doesn’t halt the system.
-    - **High Priority Job Execution**: Handled effectively across multiple CPUs.
+    - **CPU Utilization**: Maximized, with multiple CPUs handling different tasks concurrently.
+    - **Reliability**: Enhanced, as system failure due to one CPU doesn’t affect others.
+    - **High Priority Job Execution**: Effectively managed across multiple processors.
 
 ### 6. Distributed OS
-- **Description**: A loosely coupled system where multiple CPUs and memories are connected over a network.
+- **Description**: A system where multiple CPUs, each with its own memory, are connected over a network to distribute tasks.
 - **Advantages**:
-    - Jobs are distributed across different systems.
-    - Examples include systems like **LeetCode**, where multiple jobs are executed on different systems connected over the internet.
+    - Jobs can be distributed across different systems, improving scalability.
+    - An example is **LeetCode**, where multiple jobs run on different machines over the internet.
 
 ### 7. Real-Time Operating System (RTOS)
-- **Description**: An OS where tasks are executed in real time with minimal delay.
-- **Applications**: Used in critical systems like **Air Traffic Control (ATC)**, **nuclear plants**, and **industrial control systems**.
+- **Description**: An OS that ensures tasks are executed within a specific, minimal response time.
+- **Applications**: Commonly used in critical applications like **Air Traffic Control (ATC)**, **nuclear plants**, and **industrial automation**.
+
+
 
 ---
 
