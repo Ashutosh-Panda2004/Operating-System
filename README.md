@@ -1,8 +1,7 @@
 # Operating System Lecture Notes (Lecture 1)
 
 ## **Introduction**
-
-Hello, this is Lakshay, and today we are starting Lecture 1 of the Operating System (OS) series.  
+ 
 We will begin with the basics of what an OS is, why it is necessary, and why it exists.
 
 ---
