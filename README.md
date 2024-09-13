@@ -269,6 +269,56 @@ Each CPU can handle different processes at the same time, enhancing overall syst
 **Definition:**  
 Multitasking is the ability of an operating system to execute multiple tasks (processes) simultaneously. It can be achieved through either process-based multitasking or thread-based multitasking.
 
+### Process-Based Multitasking
+
+**Definition:**  
+Process-based multitasking involves running multiple processes concurrently. Each process is an independent unit of execution with its own memory space and resources.
+
+**Key Characteristics:**
+- **Isolation:** Processes run in separate memory spaces, ensuring isolation between them. This prevents one process from interfering with another's memory.
+- **Context Switching:** The operating system manages multiple processes by switching the CPU’s focus from one process to another. This involves saving and restoring the state of processes, including memory and CPU registers.
+- **Overhead:** Process-based multitasking has a higher overhead compared to thread-based multitasking due to the need for process context switching, which includes memory management and preservation of the process state.
+
+**Example:**  
+Running a web browser, a text editor, and a media player simultaneously on your computer. Each application runs as a separate process, and the operating system schedules CPU time to each process.
+
+### Thread-Based Multitasking
+
+**Definition:**  
+Thread-based multitasking involves running multiple threads within a single process concurrently. Threads are smaller units of execution that share the same memory space and resources.
+
+**Key Characteristics:**
+- **Shared Memory:** Threads within the same process share the same memory space, allowing them to access shared data directly. This facilitates communication between threads but requires careful management to avoid conflicts.
+- **Context Switching:** Context switching between threads is generally faster than between processes because threads within the same process do not require memory switching. They only need to save and restore the state of the thread.
+- **Concurrency:** Thread-based multitasking allows for greater concurrency within a process. Multiple threads can perform different tasks simultaneously, improving the efficiency and responsiveness of applications.
+
+**Example:**  
+In a web browser, different tabs or background tasks (e.g., downloading files, rendering web pages, checking for updates) might be handled by separate threads within the same browser process. This allows the browser to perform multiple operations concurrently without launching separate processes for each task.
+
+## Comparison
+
+- **Memory Usage:**
+  - **Process-Based:** Higher memory consumption due to separate memory spaces for each process.
+  - **Thread-Based:** More efficient memory usage as threads share the same memory space within a process.
+
+- **Overhead:**
+  - **Process-Based:** Higher overhead due to the need for process context switching and memory management.
+  - **Thread-Based:** Lower overhead with faster context switching and shared resources.
+
+- **Isolation:**
+  - **Process-Based:** High level of isolation between processes, reducing risk of interference.
+  - **Thread-Based:** Lower isolation as threads share the same process memory. Care must be taken to synchronize access to shared data.
+
+- **Concurrency:**
+  - **Process-Based:** Concurrency achieved by running multiple processes simultaneously, with each process handling its own tasks.
+  - **Thread-Based:** Concurrency achieved by running multiple threads within a single process, allowing tasks to be handled more efficiently within the same application.
+
+## Summary
+
+- **Process-Based Multitasking:** Runs multiple processes simultaneously with high isolation and memory usage, but with higher context-switching overhead.
+- **Thread-Based Multitasking:** Runs multiple threads within a single process, offering lower overhead and more efficient use of resources, but with shared memory and lower isolation.
+
+
 **Key Point:**  
 In multitasking, the operating system schedules processes or threads to run concurrently, giving the illusion of simultaneous execution.
 
