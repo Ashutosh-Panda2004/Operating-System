@@ -208,7 +208,7 @@ Just like switching between study subjects by saving progress in one and moving 
 - **Description**: A system where multiple CPUs, each with its own memory, are connected over a network to distribute tasks.
 - **Advantages**:
     - Jobs can be distributed across different systems, improving scalability.
-    - An example is **LeetCode**, where multiple jobs run on different machines over the internet.
+    - Example: Systems like **Apache Hadoop** or **Google's MapReduce**.
 
 ### 7. Real-Time Operating System (RTOS)
 - **Description**: An OS that ensures tasks are executed within a specific, minimal response time.
