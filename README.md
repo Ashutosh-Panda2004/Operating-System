@@ -216,8 +216,6 @@ Just like switching between study subjects by saving progress in one and moving 
 
 ---
 
-These are the different types of Operating Systems.
-
 # OS Lecture-3 Operating Systems Concepts (Multi-Tasking vs Multi-Threading)
 
 ## Overview
