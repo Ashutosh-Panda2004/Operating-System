@@ -131,9 +131,6 @@ An operating system is a piece of software that manages all the resources of a c
 
 # OS Lecture 2: Types of Operating Systems
 
-Hello ji, how are you all? This is Lakshay.  
-Welcome to the **Code Help** channel. Today, we will discuss **Lecture 2** of our OS series.
-
 We will explore some interesting topics:
 
 1. Types of Operating Systems (OS) and how many types there are?
@@ -162,14 +159,6 @@ The OS must be capable of handling high-priority jobs.
 - Example: Consider processes P1, P2, and P3 running, and suddenly a high-priority job P4 (e.g., an antivirus scan) arrives. The OS should ensure that P4 gets executed immediately.
 
 Thus, **high-priority job execution** is our third goal.
-
----
-
-This video is sponsored by **Crio**, the world's leading project-driven platform. If you're targeting a good job and want to master development, Crio is for you.
-
-Crio offers various programs like **Full Stack Development** and **Backend Development** with internship-level projects. At the end of each program, you'll have a project-rich resume. They also offer a **Fellowship Program** with guaranteed placement in a product-based company.
-
-If you're interested, check out the link in the description for a 1-week trial and get an **assured scholarship** and **maximum discount** using the coupon code displayed on the screen.
 
 ---
 
