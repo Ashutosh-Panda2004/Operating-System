@@ -214,9 +214,109 @@ Just like switching between study subjects by saving progress in one and moving 
 - **Description**: An OS that ensures tasks are executed within a specific, minimal response time.
 - **Applications**: Commonly used in critical applications like **Air Traffic Control (ATC)**, **nuclear plants**, and **industrial automation**.
 
-
-
 ---
 
 These are the different types of Operating Systems.
+
+# OS Lecture-3 Operating Systems Concepts (Multi-Tasking vs Multi-Threading)
+
+## Overview
+
+In this lecture, we will discuss and differentiate between:
+- Multiprogramming
+- Multiprocessing
+- Multitasking
+- Multithreading
+
+We will also explore the concept of processes and threads with examples.
+
+## Key Concepts
+
+### Process
+
+**Definition:**  
+A process is a program under execution. It represents a running instance of a program and includes the program code, its current activity, and associated resources.
+
+**Example:**  
+When you open an application like Paint on Windows, the `.exe` file starts executing. This executable file converts into a process, visible in Task Manager as "MS Paint."
+
+### Thread
+
+**Definition:**  
+A thread is the smallest unit of execution within a process. It is sometimes referred to as a lightweight process because it operates within the context of a process but can execute tasks independently.
+
+**Example:**  
+In a text editor, one thread might handle user input, another might perform spell-checking, and another might handle formatting.
+
+## Concepts Explained
+
+### Multiprogramming
+
+**Definition:**  
+Multiprogramming involves running multiple programs on a single CPU by managing their execution. It aims to maximize CPU utilization by keeping the CPU busy with multiple processes.
+
+**Key Point:**  
+Only one process is executed at a time, but multiple processes are kept in memory to ensure that CPU time is used efficiently.
+
+### Multiprocessing
+
+**Definition:**  
+Multiprocessing refers to the use of two or more CPUs within a single computer system. It allows multiple processes to be executed simultaneously.
+
+**Key Point:**  
+Each CPU can handle different processes at the same time, enhancing overall system performance and throughput.
+
+### Multitasking
+
+**Definition:**  
+Multitasking is the ability of an operating system to execute multiple tasks (processes) simultaneously. It can be achieved through either process-based multitasking or thread-based multitasking.
+
+**Key Point:**  
+In multitasking, the operating system schedules processes or threads to run concurrently, giving the illusion of simultaneous execution.
+
+### Multithreading
+
+**Definition:**  
+Multithreading involves executing multiple threads within a single process. Threads share the same memory space but run independently, allowing for concurrent operations within the same application.
+
+**Example:**  
+In a JPG to PNG converter, one thread might handle converting part A of the image while another thread converts part B. This parallel execution can speed up the process.
+
+## Detailed Comparison
+
+### Differences Between Multitasking and Multithreading
+
+1. **Scope:**
+   - **Multitasking:** Involves multiple processes. Each process has its own memory space.
+   - **Multithreading:** Involves multiple threads within a single process. Threads share the same memory space.
+
+2. **Isolation and Memory Protection:**
+   - **Multitasking:** Processes are isolated, with separate memory allocation. This provides isolation and protection between processes.
+   - **Multithreading:** Threads within the same process do not have separate memory allocation. They share memory, so no isolation or memory protection is applied.
+
+3. **Scheduling:**
+   - **Multitasking:** Processes are scheduled by the operating system to ensure that CPU time is shared among all active processes.
+   - **Multithreading:** Threads are scheduled within a single process, with each thread having its own execution priority but sharing the same process resources.
+
+### Context Switching
+
+- **Processes:** Context switching involves saving and loading the state of processes, including memory and CPU registers. This can be relatively slow due to memory switching.
+- **Threads:** Context switching between threads is faster because threads within the same process share the same memory space, reducing the overhead associated with memory switching.
+
+### Cache Management
+
+- **Process Switching:** When switching between processes, the CPU cache is often flushed to avoid conflicts between processes using different cache data.
+- **Thread Switching:** When switching between threads within the same process, the CPU cache state is preserved, as threads share the same process data.
+
+## Summary
+
+- **Process:** A program in execution, with its own memory space.
+- **Thread:** A lightweight unit of execution within a process, sharing the same memory space.
+- **Multiprogramming:** Running multiple programs on a single CPU.
+- **Multiprocessing:** Using multiple CPUs to run multiple processes simultaneously.
+- **Multitasking:** Executing multiple tasks or processes at the same time.
+- **Multithreading:** Executing multiple threads within a single process, allowing for concurrent operations.
+
+
+
 
