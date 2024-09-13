@@ -91,7 +91,7 @@ Without an OS, there is no **isolation** between apps. One app could potentially
 
 ## **Formal Definition of an OS**
 
-An operating system is a piece of software that manages all the resources of a computer system (both hardware and software) and provides an environment in which the user can execute programs in a convenient and efficient manner.
+An operating system is a piece of software that manages all the resources of a computer system (both hardware and software) and provides an environment in which the user can execute programs and run applications in a convenient and efficient manner without any conflicts .
 
 ### **Key Roles of OS**:
 - Hides hardware complexity.
