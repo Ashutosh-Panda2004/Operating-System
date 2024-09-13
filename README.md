@@ -295,7 +295,7 @@ Thread-based multitasking involves running multiple threads within a single proc
 **Example:**  
 In a web browser, different tabs or background tasks (e.g., downloading files, rendering web pages, checking for updates) might be handled by separate threads within the same browser process. This allows the browser to perform multiple operations concurrently without launching separate processes for each task.
 
-## Comparison
+## Comparison b/w Process-Based Multitasking and Thread-Based Multitasking
 
 - **Memory Usage:**
   - **Process-Based:** Higher memory consumption due to separate memory spaces for each process.
